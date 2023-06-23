@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- font awesome -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <nav class="navbar">
+
+            <a class="navbar-brand" href=""><img src="img/logo.jpg" alt=""></a>
+        </nav>
+
+    </header>
+
+    <!-- Logins section -->
+
+    <section class="courses" id="courses">
+        <div class="container_stuFeatures">
+            <h2>student features</h2>
+            <div class="features">
+
+                <div class="feat">
+                    <div class="feature">
+                        <a href="">Leave request</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="feature_content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, animi!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feat">
+                    <div class="feature">
+                        <a href="">Complaint</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="feature_content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, animi!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feat">
+                    <div class="feature">
+                        <a href="">Mess change</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="feature_content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, animi!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feat">
+                    <div class="feature">
+                        <a href="">room allocation</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="feature_content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, animi!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feat">
+                    <div class="feature">
+                        <a href="">events</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="feature_content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, animi!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- script js -->
+    <script src="JS/script.js"></script>
+
+    <script>
+        let features=document.querySelectorAll(".feature");
+        features.forEach(function(event){
+            event.addEventListener("click",function(e){
+                // event.target.children[1].classList.toggle("active")
+                
+                console.log("e")
+                let show=document.querySelector(".feature_content").style.display;
+                if(show==="none"){
+                document.querySelector(".feature_content").style.display="inline"
+                }
+                else{
+                    document.querySelector(".feature_content").style.display="none"
+                }
+
+
+            })
+        })
+        
+    </script>
+
+    <script src="https://kit.fontawesome.com/d3d369f9f1.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

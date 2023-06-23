@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- main css -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- font awesome -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div class="containerwhole">
+  <header>
+    <!-- navbar -->
+    <nav class="navbar">
+
+      <a class="navbar-brand" href=""><img src="img/logo.jpg" alt=""></a>
+    </nav>
+
+  </header>
+
+  <!-- Logins section -->
+
+  <section class="courses" id="courses">
+    <h1 class="head">Hostel Management</h1>
+    <div class="containers">
+      <div class="swiper  card_slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide ">
+            <div class="box slide">
+              <a href="studentLogin.html"><img 
+                src="img/student.jpg"
+                alt=""></a>
+              <h3>Student</h3>
+      
+            </div>
+          </div>
+
+          <div class="swiper-slide ">
+            <div class="box slide">
+              <a href="facultyLogin.html"><img 
+                src="img/faculty_.png"
+                alt=""></a>
+              <h3>faculty</h3>
+      
+            </div>
+          </div>
+
+          <div class="swiper-slide  ">
+            <div class="box slide">
+              <a href="wardenLogin.html"><img 
+                src="img/wardern.png"
+                alt=""></a>
+              <h3>warden</h3>
+      
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      
+
+
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+  <!-- script js -->
+  <script src="JS/script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="text/javascript">
+    var swiper = new Swiper(".card_slider", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+
+</body>
+
+</html>
