@@ -10,53 +10,16 @@
 }
 
 body {
-  /* font-family: "Kaushan Script", cursive; */
-  color: var(--mainBlack);
   margin: 0;
   padding: 0;
-  
-
+  line-height: 0;
 }
-.containerwhole{
-  background-image: url("https://source.unsplash.com/random/300×300/?university") ;
-height: 100vh;
-}
-
-
-
-/* navbar */
-.navbar{
-  width: 100vw;
-  height: 5rem;
-  background-color: rgba(23, 23, 28, 0.5);
-}
-
-.navbar .navbar-brand img{
-  /* width: 10rem; */
-  height: 6rem;
-  /* background-color: white; */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-/* login page section */
-
-.head{
-  text-align: center;
-}
-
-
-
-
-
-
-
 
 *{
-  /* margin: 0; */
-  /* padding: 0; */
   box-sizing: border-box;
   outline: none;
   border: none;
+  list-style: none;
   text-decoration: none;
   transition: .2s linear;
   text-transform: capitalize;
@@ -70,16 +33,11 @@ height: 100vh;
   --black:#3d3d3d;
   --light-bg:#4b4b4b
 }
-/* *::selection{
-  background-color: var(--white);
-  color: var(--black);
-} */
 
 html{
-  /* font-size: 62.5%; */
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* scroll-padding-top: 7rem; */
+  scroll-padding-top: 7rem;
 }
 
 ::-webkit-scrollbar{
@@ -96,14 +54,159 @@ html{
   background-color: transparent;
 }
 
+.containerwhole{
+  background:rgba(43, 41, 41, 0.795) url("https://source.unsplash.com/random/300×300/?hostel") ;
+  height: 120vh;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+i{
+  cursor: pointer;
+}
 
 
 
 
-/* login page */
+/* navbar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 5rem;
+  background-color: rgba(17, 17, 23, 0.5);
+}
+
+.rightbar{
+  position: absolute;
+  right: 2vw;
+}
+
+.rightbar i{
+  padding: 0 .7rem;
+  color: rgb(194, 160, 160);
+}
+
+.navbar .navbar-brand img{
+  height: 5rem;
+}
+
+/* login page section */
+
+/* overflow account */
+.account{
+  border: 0px solid black;
+    width: 0;
+    height: 0vh;
+    position: absolute;
+    right: 0px;
+    top: 14vh;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.account.active{
+  height: 40vh;
+  width: 15vw;
+  border: 2px solid black;
+  transform: rotate3d();
+}
+
+.account .dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.account .dashboard .caption{
+  background-color: rgb(164, 164, 231);
+  width: 14.7vw;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.account .dashboard .list li{
+  line-height: 2;
+}
+.account .dashboard .list li a{
+  color: black;
+
+}
+
+/* overflow notification */
+
+.notification{
+    width: 0vw;
+    height: 0vh;
+    position: absolute;
+    right: 6vw;
+    top: 14vh;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.notification .view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification .view .caption{
+  background-color: rgb(164, 164, 231);
+  width: 14.7vw;
+  text-align: center;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.notification .view .list p{
+  text-transform: lowercase;
+  color: black;
+}
+
+.notification .view .viewall {
+  border: 2px solid black;
+  position: absolute;
+  top: 34vh;
+  width: 15vw;
+  text-align: center;
+}
+
+.notification .view .viewall a{
+  color: black;
+}
+
+
+
+.notification.active{
+  height: 40vh;
+  width: 15vw;
+  border: 2px solid black;
+  transform: rotate3d();
+}
+
+
+
+
+.head{
+  text-align: center;
+}
+
+.course{
+  position: relative;
+  
+}
 
 .courses .card_slider .slide img{
-  width: 16rem;
+  width: 14rem;
   border-radius: 2rem
 }
 
@@ -121,11 +224,13 @@ html{
 
 .courses .slide{
   width: 18rem;
-  background-color: var(--light-bg);
+  height: 24rem;
+  background-color: rgb(47 14 14 / 50%);
   border-radius: .5rem;
   text-align: center;
   margin-bottom: 4rem;
   padding: 1rem;
+  position: relative;
 }
 
 .courses .slide h3{
@@ -145,8 +250,34 @@ html{
     justify-content: center;
 }
 
+.courses .slide .button:hover{
+  background-color: brown;
+  
+}
+ 
+.courses .slide .button{
+  color: white;
+  margin-bottom: .2rem;
+  
+}
+.courses .slide .icon a{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: absolute;
+  right: 1rem;
+  top: 20rem;
+}
+.courses .slide .icon i{
+  margin: auto;
+  color: white;
+}
 
 
+
+
+/* student login */
 .container{
   background-color: #00E77F;
   height: 73vh;
@@ -234,16 +365,13 @@ html{
   justify-content: space-between;
   align-items: center;
   /* border: 2px solid red; */
-  padding: .4rem;
+  padding: 1rem;
   background-color: rgb(104, 104, 210);
   color: black;
   border-radius: 1rem;
 }
 
-.feature_content.active{
-  transition: all 0.1 ease-in-out;
-  display: inline;
-}
+
 
 
 
@@ -251,20 +379,40 @@ html{
   color: black;
 }
 
-.feature_content{
+.feat .feature_content {
+  margin-left: 1vw;
   display: none;
-  /* border: 2px solid red; */
-  margin-top: .1rem;
-  max-width: 15vw;
+  
 }
+
+/* js */
+.feature_content.active{
+  display: inline;
+  transform: height 0.2 ease-in-out;
+}
+.feat .feature_content form input{
+  border: 2px solid black;
+  padding: .3rem;
+  margin-bottom: .3rem;
+}
+
+.feat .feature_content form textarea{
+  border: 2px solid black;
+}
+
+.feat .feature_content form select{
+  border: 2px solid black;
+  padding: .3rem;
+  color: #b08e8e;
+}
+
+
 
 
 /* faculty features */
 
-.courseOpt{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.feature{
+  margin-bottom: 1rem;
 }
 
 .btn{
@@ -272,108 +420,119 @@ html{
   padding: .6rem;
   margin-bottom: .4rem;
   border-radius: 1rem;
+}
+
+.btn.active{
+  border: none;
+}
+
+.courseOpt{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+.btn .course{
   display: flex;
   justify-content: space-between;
 }
 
+.btn .studentList {
+  display: none;
+}
+
+.btn .studentList span{
+  max-width: 25vw;
+  font-size: small;
+}
+
+.btn .studentList td{
+  font-size: 10px;
+}
+.studentList.active{
+  display: inline;
+}
+
+
+
 
 /* warden features */
 
-
-
-
-
-
-
-@media (min-width:400px) and (max-width:800px){
-  #menu-btn{
-      display: inline-block;
-  }
-
-  .header .flex .navbar{
-      position: absolute;
-      top: 99%;left: 0;right: 0;
-      border-top: 2px solid var(--light-white);
-      border-bottom: 2px solid var(--light-white);
-      background-color: var(--light-bg);
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
-  }
-  .header .flex .navbar a{
-      display: block;
-      margin: 1.5rem;
-  }
-
-  .home .row .image{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-  }
-  .home .row .image img{
-      width: 80%;
-      
-  }
-  .home .row .content h3{
-      font-size: 4rem;
-  }
-
-  .btn{
-      font-size: 1rem;
-  }
-  .about .row .image {
-      text-align: center;
-  }
-
-
-
- 
-}
-
-@media (max-width:399px) {
-#menu-btn{
-  display: inline-block;
-}
-
-.header .flex .navbar{
-  position: absolute;
-  top: 99%;left: 0;right: 0;
-  border-top: 2px solid var(--light-white);
-  border-bottom: 2px solid var(--light-white);
-  background-color: var(--light-bg);
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
-}
-.header .flex .navbar a{
-  display: block;
-  margin: 1.5rem;
-}
-
-.home .row .image{
+.request .btn{
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  justify-content: space-between;
 }
-.home .row .image img{
-  width: 100%;
-  
-}
-.home .row .content h3{
-  font-size: 4rem;
-}
-
-.btn{
-  font-size: 1rem;
-}
-.count .box-container{
-grid-template-columns: repeat(auto-fit,minmax(18rem ,1fr));
-}
-.about .row .image .img{
-  width: 27rem;
+.button:hover{
+  background-color: var(--light-bg);
 }
 
 
 
-  
+
+.feature_content .request{
+  margin-bottom: 1rem;
+  display: none;
+  padding-left: .5rem;
 }
+
+.feature_content .request.active{
+  display: inline;
+}
+
+.feature_content .request .approval{
+  display: none;
+}
+
+.feature_content .request .approval.active{
+  display: inline;
+}
+
+.feature_content .request .status{
+  display: none;
+}
+
+.feature_content .request .status.active{
+  display: inline;
+}
+
+.feature_content .request .assign{
+  display: none;
+}
+
+.feature_content .request .assign.active{
+  display: inline;
+}
+
+
+
+
+/* js */
+
+
+
+
+
+.request .assign input{
+  padding: .3rem;
+  border: 2px solid black;
+  border-radius: .5rem;
+  /* border-bottom: .1rem; */
+}
+
+.approval.active{
+  display: inline;
+}
+
+.assign.active{
+  display: inline;
+}
+
+
+
+
+
+
+
+
+

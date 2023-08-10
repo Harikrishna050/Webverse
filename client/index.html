@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d3d369f9f1.js" crossorigin="anonymous"></script>
   <!-- main css -->
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/utils.css">
   <!-- font awesome -->
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -14,61 +18,136 @@
 
 <body>
   <div class="containerwhole">
-  <header>
-    <!-- navbar -->
-    <nav class="navbar">
-
-      <a class="navbar-brand" href=""><img src="img/logo.jpg" alt=""></a>
-    </nav>
-
-  </header>
-
-  <!-- Logins section -->
-
-  <section class="courses" id="courses">
-    <h1 class="head">Hostel Management</h1>
-    <div class="containers">
-      <div class="swiper  card_slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide ">
-            <div class="box slide">
-              <a href="studentLogin.html"><img 
-                src="img/student.jpg"
-                alt=""></a>
-              <h3>Student</h3>
-      
-            </div>
-          </div>
-
-          <div class="swiper-slide ">
-            <div class="box slide">
-              <a href="facultyLogin.html"><img 
-                src="img/faculty_.png"
-                alt=""></a>
-              <h3>faculty</h3>
-      
-            </div>
-          </div>
-
-          <div class="swiper-slide  ">
-            <div class="box slide">
-              <a href="wardenLogin.html"><img 
-                src="img/wardern.png"
-                alt=""></a>
-              <h3>warden</h3>
-      
-            </div>
-          </div>
-
+    <header>
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <a class="navbar-brand" href=""><img src="img/logo.jpg" alt=""></a>
         </div>
-        <div class="swiper-pagination"></div>
+
+        <div class="rightbar">
+          <a href="index.html"><i class="fa-solid fa-house fa-xl"></i></a>
+          <i class="fa-solid fa-bell fa-xl"></i>
+          <i class="fa-solid fa-user fa-xl"></i>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Logins section -->
+
+    <section class="courses" id="courses">
+      <h1 class="head white">Hostel Management system</h1>
+      <div class="containers">
+
+        <!-- account page -->
+        <div class="account">
+          <div class="dashboard">
+            <div class="caption">
+              <a href=""><h3>dashboard</h3></a>
+            </div>
+            <div class="list">
+              <li>
+                <i class="fa-solid fa-user"></i>
+                <a class="white" href="">profile</a>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <a class="white" href="">grades</a>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-message"></i>
+                <a class="white" href="">messages</a>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-wrench"></i>
+                <a class="white" href="">preferences</a>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <a class="white" href="">log out</a>
+              </li>
+            </div>
+          </div>
+          
+        </div>
+
+
+        <!-- notification -->
+
+        <div class="notification">
+          <div class="view">
+            <div class="caption">
+              <a href=""><h3>notification</h3></a>
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="list">
+              <p class="white">you have no notification</p>
+            </div>
+
+            <div class="viewall">
+              <p><a href="">view all</a></p>
+            </div>
+          </div>
+          
+        </div>
+
+
+
+        <div class="swiper  card_slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide ">
+              <div class="box slide">
+                <a href="#"><img src="img/student.jpg" alt=""></a>
+                <h3>Student</h3>
+
+                <div class="icon">
+                  <a href="HTML/studentLogin.html" target="_self" rel="noopener noreferrer"><button class="button">Log
+                      in</button>
+                    <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i></a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide ">
+              <div class="box slide">
+                <a href="#"><img src="img/faculty_.png" alt=""></a>
+                <h3>faculty</h3>
+                <div class="icon">
+                  <a href="HTML/facultyLogin.html" target="_self" rel="noopener noreferrer"><button class="button">Log
+                      in</button>
+                    <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i></a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide  ">
+              <div class="box slide">
+                <a href="#"><img src="img/wardern.png" alt=""></a>
+                <h3>warden</h3>
+                <div class="icon">
+                  <a href="HTML/wardenLogin.html" rel="noopener noreferrer"><button class="button">Log in</button>
+                    <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i></a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+
+
       </div>
-      
-
-
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 
 
 
@@ -92,6 +171,9 @@
       },
     });
   </script>
+
+
+
 
 
 </body>
